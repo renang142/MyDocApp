@@ -1,0 +1,6 @@
+/* Reset do CSS
+Faz com que a página sempre apareça igual em qualquer navegador moderno.
+*/
+body{
+    font-family: 'Courier New', Courier, monospace;
+}

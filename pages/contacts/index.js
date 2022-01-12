@@ -1,1 +1,5 @@
-console.log('Esta é a contacts');
+// Define a página de reload
+setPage('contacts');
+
+// Título da página
+setTitle('Faça contato');

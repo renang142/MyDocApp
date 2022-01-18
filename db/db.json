@@ -1,67 +1,51 @@
 {
-  "contacts": [
+  "contacts": [],
+  "config": {
+    "clientWidth": "768",
+    "appName": "My.Docs.App",
+    "appSlogan": "Seus documentos em nossas mãos.",
+    "separator": ".:.",
+    "appLogo": "assets/img/logo_64.png",
+    "copyright": "2021 Joca da Silva"
+  },
+  "social": [
     {
-      "name": "Joca da Silva",
-      "email": "joca@silva.com",
-      "subject": "Teste do Joca",
-      "message": "Mesagem do Joca",
-      "date": "2022-01-17 14:34:03",
-      "status": "recebido",
-      "id": 1
+      "name": "(21) 9876-54321",
+      "href": "https://wa.me/5521987654321",
+      "icon": "fa-whatsapp-square",
+      "nofooter": true
     },
     {
-      "name": "Joca da Silva",
-      "email": "joca@silva.com",
-      "subject": "Teste do Joca",
-      "message": "Mesagem do Joca",
-      "date": "2022-01-17 14:34:14",
-      "status": "recebido",
-      "id": 2
+      "name": "WhatsApp",
+      "href": "https://wa.me/5521987654321",
+      "icon": "fa-whatsapp-square",
+      "nofooter": true
     },
     {
-      "name": "Joca da Silva",
-      "email": "joca@silva.com",
-      "subject": "Teste do Joca",
-      "message": "Mesagem do Joca",
-      "date": "2022-01-17 14:34:25",
-      "status": "recebido",
-      "id": 3
+      "name": "E-mail",
+      "href": "maito://contato@mydocsapp.com",
+      "icon": "fa-envelope-square",
+      "nofooter": true
     },
     {
-      "name": "Joca da Silva",
-      "email": "joca@silva.com",
-      "subject": "Teste do Joca",
-      "message": "Mesagem do Joca",
-      "date": "2022-01-17 14:44:27",
-      "status": "recebido",
-      "id": 4
+      "name": "GitHub",
+      "href": "https://github.com/Luferat",
+      "icon": "fa-github-square"
     },
     {
-      "name": "Joca da Silva",
-      "email": "joca@silva.com",
-      "subject": "Teste do Joca",
-      "message": "Mesagem do Joca",
-      "date": "2022-01-17 14:45:21",
-      "status": "recebido",
-      "id": 5
+      "name": "LinkedIn",
+      "href": "https://linkedin.com/Luferat",
+      "icon": "fa-linkedin"
     },
     {
-      "name": "Joca sa Silva",
-      "email": "joca@silva.com",
-      "subject": "Teste do Joca",
-      "message": "dfsadfsdaf dsaf",
-      "date": "2022-01-17 16:42:12",
-      "status": "recebido",
-      "id": 6
+      "name": "Facebook",
+      "href": "https://facebook.com/Luferat",
+      "icon": "fa-facebook-square"
     },
     {
-      "name": "Setembrino Trocatapas",
-      "email": "set@brino.com",
-      "subject": "Teste de mensagem do Setembrino",
-      "message": "Setembrino que falar.<br>Setembrino que falar.<br>Setembrino que falar.<br>Setembrino que falar.<br>Setembrino que falar.<br>Setembrino que falar.<br>Setembrino que falar.",
-      "date": "2022-01-17 16:43:42",
-      "status": "recebido",
-      "id": 7
+      "name": "Instagram",
+      "href": "https://instagram.com/Luferat",
+      "icon": "fa-instagram-square"
     }
   ]
 }

@@ -394,40 +394,61 @@ function sanitizeString(stringValue, stripTags = true) {
  * Obtém uma lista das redes sociais do aplicativo via API. * 
  *   'element' define onde a lista será exibida.
  *   'fullList' se 'true', lista todos os contatos
- *     getSocialList('footer') --> Gera a lista no rodapé.
- *     getSocialList('aside') --> Gera a lista na aside.
+ *              se 'false', não lista os contatos com "nofooter": true
+ *
+ *    Por default, 'fullList' = 'true'
+ * 
+ *   Exemplos:
+ *     getSocialList('.social') --> Gera a lista no rodapé.
+ *     getSocialList('.contact-list', true); --> Gera a lista na aside.
  */
 function getSocialList(element, fullList = false) {
 
+    // View que exibe a lista.
     var socialList = '';
 
+    // Obtém a lista do servidor (API)
     fetch(apiURL + 'social')
         .then((socialData) => {
+
+            // Se deu certo...
             if (socialData.ok) {
+
+                // Obtém os dados e armazena em 'data'.
                 socialData.json().then((data) => {
 
+                    // Itera 'data'
                     for (let i = 0; i < data.length; i++) {
 
+                        // Se é para exibir a lista completa...
                         if (fullList) {
+
+                            // Monta a view.
                             socialList += `
                                 <a href="${data[i].href}" target="_blank" title="Meu ${data[i].name}">
-                                    <i class="fab ${data[i].icon} fa-fw"></i><span>${data[i].name}</span>
+                                    <i class="${data[i].icon}"></i><span>${data[i].name}</span>
                                 </a>                        
                             `;
+
+                            // Se é para exibir so redes sociais...
                         } else {
+
+                            // Descarta o que não é rede social ("nofooter": true)
                             if (!data[i].nofooter) {
+
+                                // Monta a view.
                                 socialList += `
                                     <a href="${data[i].href}" target="_blank" title="Meu ${data[i].name}">
-                                        <i class="fab ${data[i].icon} fa-fw"></i><span>${data[i].name}</span>
+                                        <i class="${data[i].icon}"></i><span>${data[i].name}</span>
                                     </a>                        
                                 `;
                             }
                         }
                     }
 
+                    // Exibe a view no elemento selecionado.
                     el(element).innerHTML = socialList;
                 })
             }
         });
-
 }
